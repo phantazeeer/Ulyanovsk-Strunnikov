@@ -91,7 +91,7 @@ class RefactorDB(QMainWindow):
     def save_results(self):
         if self.modified:
             cur = self.con.cursor()
-            que = "UPDATE history SET\n"
+            que = "UPDATE cofeyochek SET\n"
             que += ", ".join([f"{key}='{self.modified.get(key)}'"
                               for key in self.modified.keys()])
             que += "WHERE id = ?"
